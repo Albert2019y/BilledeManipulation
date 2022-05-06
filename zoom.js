@@ -5,7 +5,7 @@ let z
 
 //Vi loader vores billede. 
 function preload() {
-  img = loadImage('./../billeder/Wally.jpg');
+  img = loadImage('./Wally.jpg');
 }
 
 //Vi setter vores canvas op og definere vores 2 variable.
