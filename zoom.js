@@ -33,7 +33,10 @@ function draw() {
   	let c = img.get(mouseX-0.5*s+i, mouseY-0.5*s+j);
   	fill(c);
     //Vi tegner de forstørrede pixels.
-  	rect(mouseX - 0.5*z*s + z*i,mouseY - 0.5*z*s + z*j, z, z);
+	if(dist(mouseX,mouseY,mouseX-i,mouseY-y)>s) {
+		rect(mouseX - 0.5*z*s + z*i,mouseY - 0.5*z*s + z*j, z, z);
+
+	}
 	}
   }
 }
@@ -53,3 +56,6 @@ function keyPressed(){
     	s = max((50+s-4)%60,s-4)
     }
 } 
+function dist(x1,y1,x2,y2) {
+    return ((x1-x2)**2+(y1-y2)**2)**2
+}
