@@ -33,7 +33,7 @@ function draw() {
   	let c = img.get(mouseX-0.5*s+i, mouseY-0.5*s+j);
   	fill(c);
     //Vi tegner de forstørrede pixels.
-	if(dist(mouseX,mouseY,mouseX-i,mouseY-y)>s) {
+	if(dist(mouseX,mouseY,mouseX-i,mouseY-y)<=s) {
 		rect(mouseX - 0.5*z*s + z*i,mouseY - 0.5*z*s + z*j, z, z);
 
 	}
